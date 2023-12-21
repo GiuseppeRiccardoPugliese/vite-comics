@@ -1,11 +1,13 @@
 <script>
 import AppHeader from './components/AppHeader.vue'
 import AppContent from './components/AppContent.vue'
+import AppAboutUs from './components/AppAboutUs.vue'
 
 export default {
   components: {
     AppHeader,
     AppContent,
+    AppAboutUs,
   }
 }
 </script>
@@ -22,6 +24,11 @@ export default {
   <main>
     <AppContent />
   </main>
+
+  <!-- About Us -->
+  <section>
+    <AppAboutUs />
+  </section>
 </template>
 
 <style lang="scss">
