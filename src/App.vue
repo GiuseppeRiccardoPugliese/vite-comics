@@ -20,7 +20,7 @@ export default {
 
   <!-- Main -->
   <main>
-
+    <AppContent />
   </main>
 </template>
 
