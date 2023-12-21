@@ -81,11 +81,21 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@use './styles/partials/variables' as *;
-@use './styles/partials/mixins' as *;
+@use '../styles/partials/variables' as *;
+@use '../styles/partials/mixins' as *;
 
 header {
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+
+    a {
+        align-items: center;
+        display: flex;
+    }
+
+    img {
+        width: 80px;
+    }
 
     ul {
         list-style: none;
@@ -93,14 +103,17 @@ header {
         @include center();
 
         li a {
+            text-align: center;
             display: inline-block;
             padding: 1rem;
             text-decoration: none;
             font-weight: 600;
+            font-size: $font14;
+            color: $bg-black;
 
             &.active,
             &:hover {
-                background: ($blue, 80%);
+                color: ($blue);
             }
         }
     }
