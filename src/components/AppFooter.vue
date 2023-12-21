@@ -8,11 +8,11 @@ export default {
     <footer>
         <div class="container">
 
-            <div class="left">
+            <div class="left"> <!-- BTN SIGN-UP -->
                 <button>SIGN-UP NOW!</button>
             </div>
 
-            <div class="right">
+            <div class="right"> <!-- SOCIALS W/ICONS -->
                 <span>FOLLOW US</span>
                 <a href="#"><img src="/public/footer-facebook.png" alt=""></a>
                 <a href="#"><img src="/public/footer-twitter.png" alt=""></a>
@@ -70,12 +70,6 @@ footer {
             padding: 0.4rem;
         }
     }
-
-    // .right {
-    //     .right span {
-    //         color: $blue;
-    //     }
-    // }
 
 }
 </style>
