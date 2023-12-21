@@ -87,7 +87,7 @@ export default {
 header {
     display: flex;
     justify-content: space-between;
-    padding: 10px 0;
+    padding: 20px 0;
 
     a {
         align-items: center;
