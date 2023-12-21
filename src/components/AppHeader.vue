@@ -65,7 +65,7 @@ export default {
 
         <!-- Logo principale -->
         <a href="#">
-            <img src="../assets/dc-logo.png" alt="DC LOGO">
+            <img src="/public/dc-logo.png" alt="DC LOGO">
         </a>
 
         <nav>
@@ -87,36 +87,40 @@ export default {
 header {
     display: flex;
     justify-content: space-between;
+    padding: 10px 0;
 
     a {
         align-items: center;
         display: flex;
+
+        img {
+            width: 80px;
+        }
     }
 
-    img {
-        width: 80px;
-    }
+    nav {
+        display: flex;
 
-    ul {
-        list-style: none;
-        margin: 2.5rem 1rem 4rem;
-        @include center();
+        ul {
+            list-style: none;
+            @include center();
 
-        li a {
-            text-align: center;
-            display: inline-block;
-            padding: 1rem;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: $font14;
-            color: $bg-black;
+            li a {
+                padding: 1rem;
+                text-decoration: none;
+                font-weight: 600;
+                font-size: $font14;
+                color: $bg-black;
 
-            &.active,
-            &:hover {
-                color: ($blue);
+                &.active,
+                &:hover {
+                    color: ($blue);
+                }
             }
         }
     }
+
+
 }
 </style>
 

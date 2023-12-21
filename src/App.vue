@@ -2,12 +2,16 @@
 import AppHeader from './components/AppHeader.vue'
 import AppContent from './components/AppContent.vue'
 import AppAboutUs from './components/AppAboutUs.vue'
+import AppInfo from './components/AppInfo.vue'
+import AppFooter from './components/AppFooter.vue'
 
 export default {
   components: {
     AppHeader,
     AppContent,
     AppAboutUs,
+    AppInfo,
+    AppFooter,
   }
 }
 </script>
@@ -29,6 +33,16 @@ export default {
   <section>
     <AppAboutUs />
   </section>
+
+  <!-- Info -->
+  <section>
+    <AppInfo />
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <AppFooter />
+  </footer>
 </template>
 
 <style lang="scss">

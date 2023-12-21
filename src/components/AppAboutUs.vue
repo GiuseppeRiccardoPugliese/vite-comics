@@ -6,24 +6,23 @@ export default {
             links: [
                 {
                     text: "DIGITAL COMICS",
-                    src: "../assets/buy-comics-digital-comics.png",
+                    src: "/public/buy-comics-digital-comics.png",
                 },
                 {
                     text: "DC MERCHANDISE",
-                    src: "../assets/buy-comics-merchandise.png",
-                    current: true,
+                    src: "/public/buy-comics-merchandise.png",
                 },
                 {
                     text: "SUBSCRIPTION",
-                    src: "../assets/buy-comics-subscriptions.png",
+                    src: "/public/buy-comics-subscriptions.png",
                 },
                 {
                     text: "COMIC SHOP LOCATOR",
-                    src: "../assets/buy-comics-shop-locator.png",
+                    src: "/public/buy-comics-shop-locator.png",
                 },
                 {
                     text: "DC POWER VISA",
-                    src: "../assets/buy-dc-power-visa.svg",
+                    src: "/public/buy-dc-power-visa.svg",
                 },
             ]
         }
@@ -36,9 +35,14 @@ export default {
         <div class="container">
             <ul>
                 <li v-for="link in links">
-                    <img :src="link.src" alt="">
+
                     <a href="#">
-                        {{ link.text }}
+                        <div>
+                            <img :src="link.src" alt="">
+                        </div>
+                        <span>
+                            {{ link.text }}
+                        </span>
                     </a>
                 </li>
             </ul>
@@ -59,40 +63,27 @@ section {
         height: 100%;
         width: 100%;
         display: flex;
-        align-items: center;
+        justify-content: center;
 
-        // div {
-        //     width: 100%;
-        //     height: 100%;
-        //     display: flex;
-        //     align-items: center;
-        //     justify-content: center;
-
-        //     img {
-        //         width: 50px;
-        //         height: auto;
-        //         margin-right: 1rem;
-        //     }
-
-        //     a {
-        //         color: $primary;
-        //         font-size: $font14;
-        //         text-decoration: none;
-        //     }
-        // }
         ul {
             list-style: none;
-            margin: 2.5rem 1rem 4rem;
             @include center();
 
+            div {
+                display: flex;
+                justify-content: center;
+                margin-right: 10px;
+                width: 60px;
+                height: 60px;
+            }
+
             li a {
-                text-align: center;
-                display: inline-block;
+                display: flex;
+                align-items: center;
                 padding: 1rem;
                 text-decoration: none;
-                font-weight: 600;
                 font-size: $font14;
-                color: $bg-black;
+                color: $primary;
             }
         }
     }
