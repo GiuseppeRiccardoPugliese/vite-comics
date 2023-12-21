@@ -62,8 +62,20 @@ export default {
 
 <template>
     <header>
+
+        <!-- Logo principale -->
+        <a href="#">
+            <img src="../assets/dc-logo.png" alt="DC LOGO">
+        </a>
+
         <nav>
-            <img src="../assets/dc-logo.png" alt="">
+            <ul>
+                <li v-for="link in links">
+                    <a :href="link.url" :class="link.current ? 'active' : ''">
+                        {{ link.text }}
+                    </a>
+                </li>
+            </ul>
         </nav>
     </header>
 </template>
@@ -71,5 +83,27 @@ export default {
 <style lang="scss" scoped>
 @use './styles/partials/variables' as *;
 @use './styles/partials/mixins' as *;
+
+header {
+    text-align: center;
+
+    ul {
+        list-style: none;
+        margin: 2.5rem 1rem 4rem;
+        @include center();
+
+        li a {
+            display: inline-block;
+            padding: 1rem;
+            text-decoration: none;
+            font-weight: 600;
+
+            &.active,
+            &:hover {
+                background: ($blue, 80%);
+            }
+        }
+    }
+}
 </style>
 
